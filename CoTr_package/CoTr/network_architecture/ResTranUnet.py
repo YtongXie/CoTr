@@ -149,8 +149,8 @@ class U_ResTran3D(nn.Module):
         # # Single_scale
         # # x = self.transposeconv_stage2(x_trans.transpose(-1, -2).view(x_convs[-1].shape))
         # # skip2 = x_convs[-2]
-        # Multi-scale
-        x = self.transposeconv_stage2(x_trans[:, 6912::].transpose(-1, -2).view(x_convs[-1].shape))
+        # Multi-scale   
+        x = self.transposeconv_stage2(x_trans[:, 6912::].transpose(-1, -2).view(x_convs[-1].shape)) # x_trans length: 12*24*24+6*12*12=7776
         skip2 = x_trans[:, 0:6912].transpose(-1, -2).view(x_convs[-2].shape)
 
         x = x + skip2
