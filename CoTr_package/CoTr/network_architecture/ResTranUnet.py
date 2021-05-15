@@ -117,7 +117,7 @@ class U_ResTran3D(nn.Module):
                 if m.bias is not None:
                     nn.init.constant_(m.bias, 0)
 
-        self.backbone = CNNBackbone.Backbone(depth=9, norm_cfg=norm_cfg, weight_std=weight_std)
+        self.backbone = CNNBackbone.Backbone(depth=9, norm_cfg=norm_cfg, activation_cfg=activation_cfg, weight_std=weight_std)
         total = sum([param.nelement() for param in self.backbone.parameters()])
         print('  + Number of Backbone Params: %.2f(e6)' % (total / 1e6))
 
