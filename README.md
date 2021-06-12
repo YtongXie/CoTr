@@ -48,7 +48,7 @@ If this code is helpful for your study, please cite:
 @article{xie2021cotr,
   title={CoTr: Efficiently Bridging CNN and Transformer for 3D Medical Image Segmentation},
   author={Xie, Yutong and Zhang, Jianpeng and Shen, Chunhua and Xia, Yong},
-  journal={arXiv preprint arXiv:2103.03024},
+  booktitle={MICCAI},
   year={2021}
 }
   
