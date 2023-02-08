@@ -208,3 +208,14 @@ class ResTranUnet(SegmentationNetwork):
             return seg_output
         else:
             return seg_output[0]
+if __name__ == '__main__':
+    
+    #test model directly
+    device=torch.device('cpu')
+    data=torch.randn((1,1,64,128,128)).to(device)
+    testmodel=U_ResTran3D(num_classes=2)
+    total = sum([param.nelement() for param in testmodel.parameters()])
+
+    print("Number of parameter: %.2fM" % (total / 1e6))
+   
+    print(testmodel(data)[0].size())
