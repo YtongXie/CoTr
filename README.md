@@ -58,4 +58,4 @@ If this code is helpful for your study, please cite:
 Part of codes are reused from the [nnU-Net](https://github.com/MIC-DKFZ/nnUNet). Thanks to Fabian Isensee for the codes of nnU-Net.
 
 ### Contact
-Yutong Xie (xuyongxie@mail.nwpu.edu.cn)
+Yutong Xie (yutong.xie678@gmail.com)
