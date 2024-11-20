@@ -264,8 +264,8 @@ class nnUNetTrainerV2_ResTrans(nnUNetTrainer):
         splits_file = join(self.dataset_directory, "splits_final.pkl")
         splits = load_pickle(splits_file)
 
-        tr_keys = splits[0]['train']
-        val_keys = splits[0]['val']
+        tr_keys = splits[self.fold]['train']
+        val_keys = splits[self.fold]['val']
 
         tr_keys.sort()
         val_keys.sort()
