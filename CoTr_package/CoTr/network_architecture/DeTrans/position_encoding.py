@@ -25,7 +25,7 @@ class PositionEmbeddingSine(nn.Module):
 
     def forward(self, x):
         bs, c, d, h, w = x.shape
-        mask = torch.zeros(bs, d, h, w, dtype=torch.bool).cuda()
+        mask = torch.zeros(bs, d, h, w, dtype=torch.bool).to(x.device)
         assert mask is not None
         not_mask = ~mask
         d_embed = not_mask.cumsum(1, dtype=torch.float32)
